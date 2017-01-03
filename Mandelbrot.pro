@@ -14,9 +14,7 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mandelbrotcreator.cpp
 
-HEADERS  += mainwindow.h \
-    mandelbrotcreator.h
+HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui

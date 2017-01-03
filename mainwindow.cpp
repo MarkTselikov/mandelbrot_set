@@ -38,7 +38,6 @@ void MainWindow::on_iterButton_clicked()
             double scale = 0;
 
             //std::cout << "Pixel: " << i << " " << j << std::endl;
-            //std::cout << "First Values: " << x << " " << y << std::endl;
             while(n < iterations) {
 
                 double xTemp =  X_INIT + (x * x - y * y);
@@ -64,7 +63,6 @@ void MainWindow::on_iterButton_clicked()
                 //QBrush brush(QColor(scale, scale, scale));
                 QBrush brush(QColor(0, 0, 0));
                 graphicsScene->addRect(i, j, 1, 1, pen, brush);
-                //std::cout << "Stays" << std::endl;
             }
         }
     } //for end
