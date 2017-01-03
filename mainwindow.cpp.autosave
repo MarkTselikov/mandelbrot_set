@@ -63,8 +63,6 @@ void MainWindow::on_iterButton_clicked()
             }
 
             if(check) {
-                //std::cout << n << std::endl;
-                //std::cout << iterations << std::endl;
                 //scale = (double)n / (double)iterations * 255;
                 //std::cout << scale << std::endl;
                 //QPen pen(QColor(scale, scale, scale));
