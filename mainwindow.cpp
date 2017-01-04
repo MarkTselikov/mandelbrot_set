@@ -3,8 +3,6 @@
 #include <iostream>
 #include <math.h>
 
-//using namespace std;
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -48,31 +46,26 @@ void MainWindow::on_iterButton_clicked()
                 if(fabs(x * x + y * y) > 4.0) {
                     check = false;
                     scale = (double)n / (double)iterations * 255;
-                    //if(n != 0) {std::cout << n << std::endl;}
-                    //std::cout << iterations << std::endl;
-                    //std::cout << scale << std::endl;
-                    QPen pen(QColor(scale, scale, scale));
+                    //QPen pen(QColor(scale, scale, scale));
+                    QPen pen(QColor(scale, scale / 4, scale / 3));
                     pen.setWidth(0);
-                    QBrush brush(QColor(scale, scale, scale));
+                    //QBrush brush(QColor(scale, scale, scale));
+                    QBrush brush(QColor(scale, scale / 4, scale / 3));
                     graphicsScene->addRect(i, j, 1, 1, pen, brush);
                     break;
                 }
 
                 n++;
-                //std::cout << "X Y values in iteration: " << x << " " << y << std::endl;
             }
 
             if(check) {
-                //std::cout << n << std::endl;
-                //std::cout << iterations << std::endl;
                 //scale = (double)n / (double)iterations * 255;
-                //std::cout << scale << std::endl;
                 //QPen pen(QColor(scale, scale, scale));
-                //QPen pen(QColor(0, 0, 0));
-                //pen.setWidth(0);
-                //QBrush brush(QColor(scale, scale, scale));
-                //QBrush brush(QColor(0, 0, 0));
-                //graphicsScene->addRect(i, j, 1, 1, pen, brush);
+                /*QPen pen(QColor(0, 0, 0));
+                pen.setWidth(0);
+                QBrush brush(QColor(scale, scale, scale));
+                //QBrush brush(QColor(scale, scale, 150));
+                graphicsScene->addRect(i, j, 1, 1, pen, brush);*/
             }
         }
     } //for end
@@ -85,11 +78,14 @@ void MainWindow::on_pushButton_clicked()
 
     for(int i = 0; i < wdth; i++) {
         for(int j = 0; j < hght; j++) {
-
             QPen pen(QColor(255, 255, 255));
             pen.setWidth(0);
             QBrush brush(QColor(255, 255, 255));
             graphicsScene->addRect(i, j, 1, 1, pen, brush);
         }
     }
+}
+
+int colorScheme(int scheme_num) {
+    return 0;
 }
